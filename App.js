@@ -23,7 +23,7 @@ const App = () => {
 
 const Styles = StyleSheet.create({
   Page : {
-    flex : 1
+    flex : 1,
   }
 });
 

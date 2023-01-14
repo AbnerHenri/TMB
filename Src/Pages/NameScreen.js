@@ -9,7 +9,7 @@ function NameScreen() {
     const [name, setName] = useState('')
 
     function handlePage() {
-        navi.navigate('About', { name })
+        navi.navigate('About')
     }
 
     return(
@@ -29,7 +29,7 @@ function NameScreen() {
 
 const Styles = StyleSheet.create({
     Page : {
-        backgroundColor : '#ddd',
+        backgroundColor : '#000',
         flex : 1,
 
         justifyContent : 'center',

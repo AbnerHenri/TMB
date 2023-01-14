@@ -18,12 +18,12 @@ function AuthProvider({ children }) {
 
     return(
         <AuthContext.Provider value={{ 
-            setName,
-            setWeight,
-            setHeight,
-            setAge,
-            setGender,
-            setActivity,
+            name, setName,
+            weight, setWeight,
+            height, setHeight,
+            age, setAge,
+            gender, setGender,
+            activity, setActivity,
          }}>
             {children}
         </AuthContext.Provider>
