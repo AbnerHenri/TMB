@@ -1,5 +1,5 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createStackNavigator, HeaderBackground } from "@react-navigation/stack";
 
 import NameScreen from "../Pages/NameScreen";
 import AboutScreen from "../Pages/AboutScreen";
@@ -11,11 +11,15 @@ import ResultScreen from "../Pages/ResultScreen";
 const MainStack = createStackNavigator();
 
 export default () => {
+
     return(
-    <MainStack.Navigator screenOptions={{
-        headerTitleAlign : 'center',
-    }}>
-        
+    <MainStack.Navigator 
+        screenOptions={{
+            headerTitleAlign : 'center',
+            headerTintColor : '#fff',
+            HeaderBackground: '#4cc9f0'
+        }}
+    >        
         <MainStack.Screen name="Home" component={NameScreen} />
         <MainStack.Screen name="About" component={AboutScreen} />
         <MainStack.Screen name="Gender" component={GenderScreen} />

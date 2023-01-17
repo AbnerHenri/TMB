@@ -12,10 +12,6 @@ function AuthProvider({ children }) {
 
     const [activity, setActivity] = useState('')
 
-    function calcRate(weight, height, age, gender, activity) {
-        
-    }
-
     return(
         <AuthContext.Provider value={{ 
             name, setName,

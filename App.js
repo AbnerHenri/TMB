@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 
 import MainStack from './Src/Navigators/MainStack';

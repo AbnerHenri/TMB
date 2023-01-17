@@ -26,7 +26,7 @@ function AboutScreen() {
           <TextInput 
             style={Styles.Inputs}
             placeholder={"Peso em kg"}
-            placeholderTextColor={'#808080'}
+            placeholderTextColor={'#fff'}
             value={weight}
             keyboardType={'numeric'}
             onChangeText={(e) => setWeight(e)}
@@ -37,7 +37,7 @@ function AboutScreen() {
           <TextInput 
             style={Styles.Inputs}
             placeholder={"Altura em cm"}
-            placeholderTextColor={'#808080'}    
+            placeholderTextColor={'#fff'}    
             value={height}
             keyboardType={'numeric'}
             onChangeText={(e) => setHeight(e)}
@@ -49,7 +49,7 @@ function AboutScreen() {
           <TextInput
             style={Styles.Inputs}
             placeholder={"Digite sua idade"}
-            placeholderTextColor={'#808080'}
+            placeholderTextColor={'#fff'}
             value={age}
             keyboardType={'numeric'}
             onChangeText={(e) => setAge(e)}
@@ -67,25 +67,23 @@ function AboutScreen() {
 
 const Styles = StyleSheet.create({
     Page: {
-        backgroundColor: '#ccc',
+      backgroundColor: '#4361ee',
         flex: 1,
-
-        backgroundColor : '#000',
 
         justifyContent: 'center',
         alignItems: 'center'
     },
 
     Inputs : {
-      color : '#ddd',
+      color : '#FFF',
       width : 260,
       
       margin : 10,
       padding : 12,
 
-      borderWidth : 1,
-      borderBottomColor: '#6495ED',
-      backgroundColor: '#363636',
+      border : 'none',
+      borderBottomWidth : 1,
+      borderBottomColor: '#FFF',
     },  
 
     Button: {

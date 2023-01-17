@@ -29,7 +29,7 @@ function NameScreen() {
 
 const Styles = StyleSheet.create({
     Page : {
-        backgroundColor : '#000',
+        backgroundColor: '',
         flex : 1,
 
         justifyContent : 'center',
