@@ -9,7 +9,7 @@ import { Global } from "../Styles/Globals";
 
 function AboutScreen() {
 
-  const { weight, setWeight, height, setHeight, age, setAge } = useContext(AuthContext) 
+  const { weight, setWeight, height, setHeight, age, setAge, name } = useContext(AuthContext) 
   const Navigation = useNavigation()
 
   function Checks(route, weight, height, age) {
@@ -23,7 +23,8 @@ function AboutScreen() {
   return (
       <View style={Global.Background}>
 
-        <Text style={Styles.Title}>Preencha os teus dados</Text>
+        <Text style={Styles.Title}>Olá, {name == '' ? 'Visitante' : name }</Text>
+        <Text style={Styles.Title}>Por favor preencha os teus dados</Text>
           
           <TextInput 
             style={Global.Inputs}
@@ -70,9 +71,11 @@ function AboutScreen() {
 const Styles = StyleSheet.create({ 
 
     Title : {
-      color : '#ddd',
-      fontSize : 20,
-      transform : [{ translateY : -50 }]
+      color : '#fff',
+      fontSize : 19,
+      transform : [{ translateY : -50 }],
+
+      padding : 10,
     }
 })
 

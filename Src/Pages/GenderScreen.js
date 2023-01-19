@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 import { useContext } from 'react';
 import { AuthContext } from '../Contexts/Auth';
@@ -31,13 +31,16 @@ function GenderScreen() {
 
   return(
     <View style={Global.Background}>
-      <TouchableHighlight style={Styles.Button} onPress={() => setSex('Masculino')}>
-        <Text style={{color : '#ddd'}}>Masculino</Text>
-      </TouchableHighlight>
 
-      <TouchableHighlight style={Styles.Button} onPress={() => setSex('Feminino')}>
+      <Text style={Styles.Title}>Qual o seu gênero?</Text>
+
+      <TouchableOpacity style={Styles.Button} onPress={() => setSex('Masculino')}>
+        <Text style={{color : '#ddd'}}>Masculino</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={Styles.Button} onPress={() => setSex('Feminino')}>
         <Text style={{ color: '#ddd' }}>Feminino</Text>
-      </TouchableHighlight>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -56,6 +59,14 @@ const Styles = StyleSheet.create({
 
     borderRadius: 25,
     backgroundColor: '#6495ED',
+  },
+
+  Title : {
+    color : '#fff',
+    fontSize : 20,
+
+    textAlign : 'center',
+    transform : [{ translateY : -50 }]
   }
 })
 

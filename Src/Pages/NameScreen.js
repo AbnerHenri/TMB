@@ -1,14 +1,16 @@
-import React, { useState } from "react";
-import { View, Text, Button, TextInput, TouchableOpacity } from "react-native";
+import React from "react";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { Global } from "../Styles/Globals";
 
+import { useContext } from "react";
+import { AuthContext } from "../Contexts/Auth";
+
 function NameScreen() {
 
+    const { setName, name } = useContext(AuthContext)
     const navi = useNavigation()
-
-    const [name, setName] = useState('')
 
     function handlePage() {
         navi.navigate('About')
