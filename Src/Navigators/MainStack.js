@@ -16,8 +16,11 @@ export default () => {
     <MainStack.Navigator 
         screenOptions={{
             headerTitleAlign : 'center',
-            headerTintColor : '#fff',
-            HeaderBackground: '#4cc9f0'
+            headerTintColor : '#DDD',
+            headerStyle : {
+                backgroundColor: '#4361ee',
+                shadowColor : 'transparent'
+            }
         }}
     >        
         <MainStack.Screen name="Home" component={NameScreen} />

@@ -5,6 +5,8 @@ import { useContext } from "react";
 import { AuthContext } from "../Contexts/Auth";
 import { useNavigation } from '@react-navigation/native';
 
+import { Global } from "../Styles/Globals";
+
 function AboutScreen() {
 
   const { weight, setWeight, height, setHeight, age, setAge } = useContext(AuthContext) 
@@ -19,12 +21,12 @@ function AboutScreen() {
   }
 
   return (
-      <View style={Styles.Page}>
+      <View style={Global.Background}>
 
         <Text style={Styles.Title}>Preencha os teus dados</Text>
           
           <TextInput 
-            style={Styles.Inputs}
+            style={Global.Inputs}
             placeholder={"Peso em kg"}
             placeholderTextColor={'#fff'}
             value={weight}
@@ -35,7 +37,7 @@ function AboutScreen() {
           />
 
           <TextInput 
-            style={Styles.Inputs}
+            style={Global.Inputs}
             placeholder={"Altura em cm"}
             placeholderTextColor={'#fff'}    
             value={height}
@@ -47,7 +49,7 @@ function AboutScreen() {
           />
 
           <TextInput
-            style={Styles.Inputs}
+            style={Global.Inputs}
             placeholder={"Digite sua idade"}
             placeholderTextColor={'#fff'}
             value={age}
@@ -57,52 +59,15 @@ function AboutScreen() {
             ref={(input) => { this.thirdTextInput = input; }}
           />
 
-        <TouchableOpacity style={Styles.Button} onPress={() => Checks('Gender', weight, height, age)}>
-          <Text style={Styles.TextButton}>Avançar</Text>
+        <TouchableOpacity style={Global.Button} onPress={() => Checks('Gender', weight, height, age)}>
+          <Text style={Global.TextButton}>Avançar</Text>
         </TouchableOpacity>
 
       </View>
   )
 }
 
-const Styles = StyleSheet.create({
-    Page: {
-      backgroundColor: '#4361ee',
-        flex: 1,
-
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-
-    Inputs : {
-      color : '#FFF',
-      width : 260,
-      
-      margin : 10,
-      padding : 12,
-
-      border : 'none',
-      borderBottomWidth : 1,
-      borderBottomColor: '#FFF',
-    },  
-
-    Button: {
-      justifyContent: 'center',
-      alignItems: 'center',
-
-      padding: 10,
-      width: 200,
-
-      borderRadius: 20,
-      backgroundColor: '#6495ED',
-
-      transform: [{ translateY: 50 }]
-    },
-
-    TextButton: {
-      fonstSize: 15,
-      color: 'white'
-    },
+const Styles = StyleSheet.create({ 
 
     Title : {
       color : '#ddd',

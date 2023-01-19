@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../Contexts/Auth';
 
 import { useNavigation } from '@react-navigation/native';
+import { Global } from '../Styles/Globals';
 
 function GenderScreen() {
 
@@ -29,7 +30,7 @@ function GenderScreen() {
   }
 
   return(
-    <View style={Styles.Page}>
+    <View style={Global.Background}>
       <TouchableHighlight style={Styles.Button} onPress={() => setSex('Masculino')}>
         <Text style={{color : '#ddd'}}>Masculino</Text>
       </TouchableHighlight>
@@ -42,14 +43,6 @@ function GenderScreen() {
 }
 
 const Styles = StyleSheet.create({
-  Page : {
-    flex : 1,
-
-    justifyContent : 'center',
-    alignItems : 'center',
-
-    backgroundColor : '#000'
-  },
 
   Button : {
     padding : 15,

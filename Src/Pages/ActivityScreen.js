@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../Contexts/Auth';
 
 import { useNavigation } from '@react-navigation/native';
+import { Global } from '../Styles/Globals';
 
 function ActivityScreen() {
 
@@ -36,7 +37,7 @@ function ActivityScreen() {
     }
 
   return(
-      <View style={Styles.Page}>
+      <View style={Global.Background}>
 
         <View>
           <TouchableHighlight style={Styles.Button} onPress={()=> setActivityFunc(1)}>

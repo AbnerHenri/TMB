@@ -3,6 +3,7 @@ import { View, Text, TouchableHighlightComponent } from 'react-native';
 
 import { useContext } from 'react';
 import { AuthContext } from '../Contexts/Auth';
+import { Global } from '../Styles/Globals';
 
 function ResultScreen() {
 
@@ -19,7 +20,7 @@ function ResultScreen() {
     }
 
   return(
-    <View>
+    <View style={Global.Background}>
         <Text>{Calc(activity, weight, height, age, gender)}</Text>
     </View>
   );

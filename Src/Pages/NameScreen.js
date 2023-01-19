@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, Button, TextInput } from "react-native";
+import { View, Text, Button, TextInput, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+
+import { Global } from "../Styles/Globals";
 
 function NameScreen() {
 
@@ -13,35 +15,21 @@ function NameScreen() {
     }
 
     return(
-        <View style={Styles.Page}>
+        <View style={Global.Background}>
 
             <TextInput 
                 placeholder="Digite o seu nome" 
-                style={Styles.Input} 
+                placeholderTextColor={'#ddd'}
+                style={Global.Inputs} 
                 value={name}
                 onChangeText={(e) => setName(e) }
             />
 
-            <Button title="Próximo" onPress={() => handlePage()}/>
+            <TouchableOpacity style={Global.Button} onPress={()=> handlePage()}>
+                <Text style={Global.TextButton}>Avançar</Text>
+            </TouchableOpacity>
         </View>
     )
 }
-
-const Styles = StyleSheet.create({
-    Page : {
-        backgroundColor: '',
-        flex : 1,
-
-        justifyContent : 'center',
-        alignItems : 'center'
-    },
-    
-    Input : {
-        width : 200,
-        backgroundColor : '#ccc',
-        margin : 10,
-        textAlign : 'center',
-    }
-})
 
 export default NameScreen
